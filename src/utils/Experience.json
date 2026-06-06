@@ -1,0 +1,92 @@
+
+[
+    {
+      "title": "Frontend Developer",
+      "start_date": "June 2024",
+      "end_date": "Present",
+      "company_name": "Qarhami",
+      "company_location": "USA, Texas, Houston",
+      "project_desc": "At Qarhami, a Houston-based car rental company, I worked as a Frontend Developer where I developed the company’s web application from scratch, transforming Figma UI designs into pixel-perfect, responsive interfaces using React.js and modern frontend technologies. I was responsible for implementing real-time vehicle tracking through Google Maps API, allowing users to monitor rental cars live on the map. This role enhanced my expertise in building scalable and high-performance web applications while deepening my experience with geolocation features and modern JavaScript development practices.",
+      "project_link" : "https://app.qarhami.com",
+      "tech_stack": [
+        "React.js",
+        "Tailwind CSS",
+        "Ant Design",
+        "material UI",
+        "Google Maps",
+        "Socket.io",
+        "axios",
+        "Rest API",
+        "zustand",
+        "Git & gitHub"
+      ]
+    },
+    {
+        "title": "Web Developer",
+        "start_date": "Feb  2024",
+        "end_date": "Jun 2024",
+        "company_name": "Iqra University (IU), Pakistan",
+        "company_location": "Karachi Sindh Pakistan",
+        "project_desc": "At Iqra University, I was responsible for managing and maintaining the university's main website, ensuring that its functionality and user interface (UI) remained up-to-date and responsive across all devices. My duties included adding new pages, managing website content, and ensuring the UI was consistent and user-friendly.Additionally, I served as the primary point of contact for the Alumni Portal, guiding the alumni team on how to use the portal effectively and providing support for portal-related activities, ensuring a smooth user experience for alumni.",
+        "project_link" : "https://iqra.edu.pk",
+        "tech_stack": [
+          "WordPress",
+          "HTML",
+          "Css",
+          "JavaScript"
+        ]
+      },
+      {
+        "title": "Frontend Developer",
+        "start_date": "Feb  2023",
+        "end_date": "Jun 2024",
+        "company_name": "GRANULE SERVICE",
+        "company_location": "DHA Phase 6 Karachi Sindh Pakistan",
+        "project_desc": "At Granule Service, I was responsible for creating the company's marketing website, which was designed in Adobe XD. My role involved converting the UI/UX design into a functional and responsive website. This project was more than just building a website—it was about bringing the company's mindset and startup vision to life, providing effective marketing services to its clients.By ensuring the website's design aligned with the company's goals and user experience, I helped deliver a platform that accurately represented the company's values while offering a seamless, engaging experience for users across all devices.",
+        "project_link" : "https://www.socialendpoint.com",
+        "tech_stack": [
+          "HTML",
+          "Css",
+          "JavaScript",
+          "Bootstrap",
+          "Php",
+          "Mysqli",
+          "Web hosting"
+        ]
+      },
+      {
+        "title": "Internship Trainee",
+        "start_date": "Oct  2020",
+        "end_date": "Dec 2020",
+        "company_name": "Pixagon",
+        "company_location": "Hyderabad District, Sindh, Pakistan",
+        "project_desc": "During my 4-month internship at Pixagon Software House, I had the opportunity to learn and grow significantly as a web developer. I worked on a school management system, where my primary role was as a Frontend Developer, focusing on creating responsive web pages optimized for all devices.In addition to frontend development, I collaborated closely with the backend team to help design and implement databases for storing website data. This internship provided me with hands-on experience in both frontend and backend development, allowing me to strengthen my skills and gain practical knowledge. I’m now eager to begin my career as a Junior Developer, building on everything I learned during my time at Pixagon Software House",
+        "tech_stack": [
+          "HTML",
+          "Css",
+          "JavaScript",
+          "Bootstrap",
+          "Php",
+          "Mysqli",
+          "Web hosting"
+        ]
+      },
+      {
+        "title": "Full Stack Developer",
+        "start_date": "Oct  2022",
+        "end_date": "Present",
+        "company_name": "Upwork",
+        "company_location": "Remote",
+        "project_desc": "As a freelance developer, I’ve worked on a variety of projects, including building custom websites for clients, particularly non-profit organizations. One of my key projects involved creating a dynamic, CMS-based website, allowing the client to easily manage and update content.I’ve delivered numerous websites that are responsive, scalable, and optimized for high performance, ensuring smooth user experiences. I specialize in both front-end and back-end development, providing ongoing support to meet client needs and exceed expectations",
+        "tech_stack": [
+          "HTML",
+          "Css",
+          "JavaScript",
+          "Bootstrap",
+          "Php",
+          "Mysqli",
+          "Web hosting"
+        ]
+      }
+  ]
+  

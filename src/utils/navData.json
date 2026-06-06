@@ -1,0 +1,8 @@
+[
+    { "label": "Home","url":"/"},
+    { "label": "About me","url":"/about" },
+    { "label": "Portfolio" ,"url":"/Portfolio" },
+    { "label": "Experience","url":"/Experience" },
+    { "label": "Contact me" ,"url":"/Contact"} 
+  ]
+  

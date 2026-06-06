@@ -1,0 +1,42 @@
+.ant-steps-item-icon {
+    background-color: #1ea6c8 !important;
+    border-color:#1ea6c8 !important;
+}
+
+
+.ant-steps-item-tail::after{
+    background-color:transparent !important
+}
+
+.ant-steps-item-tail::after {
+    background-color: #1ea6c893!important; /* Matches the dot color */
+    width: 2px;
+  }
+  .ant-steps-item-icon > .ant-steps-icon {
+    color: white !important;
+  }
+
+
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #1ea6c8 #1a1a1a; /* thumb and track */
+  }
+  
+  /* For WebKit browsers */
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #6e6e6e; /* dark background */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #1ea6c8; /* teal blue thumb */
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+    padding-top: 10px;
+    margin-top: 40px;
+  }
+  
