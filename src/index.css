@@ -111,6 +111,10 @@ body {
            transition-all duration-300 ease-in-out 
            hover:scale-105 hover:border-[#277eb1b6];
   }
+
+  .glass-panel {
+    @apply rounded-[34px] border border-[#2FB7D966] bg-[#0b172433] shadow-[0_18px_60px_rgba(0,0,0,0.28)] backdrop-blur-[24px];
+  }
   
 }
 
@@ -129,5 +133,4 @@ body {
   .tag{
     @apply bg-[#0a527c9f] p-[4px] px-[6px] text-[#ffff] rounded-md font-mono outline-none  border border-[#277eb1b6]
   }
-
 

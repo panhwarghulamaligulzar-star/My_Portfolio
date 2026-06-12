@@ -6,6 +6,7 @@ import fkr_org from "../assets/images/Projects/fkr_org.png";
 import rdco_org from "../assets/images/Projects/rdco_org.png";
 import Gaming_chair  from "../assets/images/Projects/Gaming_chair.png";
 import isra_edu  from "../assets/images/Projects/isra_edu.png";
+import futuryfiveSoft from "../assets/images/Projects/futuryfiveSoft.png";
 
 
 
@@ -64,6 +65,12 @@ import isra_edu  from "../assets/images/Projects/isra_edu.png";
       subtitle: "Educational Institute Web Application",
       img: isra_edu,
       link:"https://odysseyacademy.education/"
+    },
+    {
+      title: "Web App",
+      subtitle: "Educational SaaS Product",
+      img: futuryfiveSoft,
+      link:"https://app.futurifysoft.com/app/education"
     },
   ];
 

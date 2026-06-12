@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { FiGlobe, FiMonitor, FiTrendingUp } from "react-icons/fi";
 import Eduction from "../utils/Eduction.json";
+import ScrollRevealSection from "../components/ScrollRevealSection";
+import ScrollRevealItem from "../components/ScrollRevealItem";
 import { useLocation } from "react-router-dom";
 
 const fadeInUp = {
@@ -14,6 +17,24 @@ const fadeInUp = {
     },
   },
 };
+
+const circleSkills = [
+  {
+    title: "SEO & Ranking",
+    value: 90,
+    icon: FiTrendingUp,
+  },
+  {
+    title: "Responsive",
+    value: 100,
+    icon: FiMonitor,
+  },
+  {
+    title: "Live Hosting",
+    value: 85,
+    icon: FiGlobe,
+  },
+];
 
 const About = () => {
   useEffect(() => {
@@ -30,10 +51,15 @@ const About = () => {
   }, [pathname]);
 
   return (
-    <div className="w-full bg-[#0f1116] text-white py-16 px-6 md:px-20 ">
-      <div className="w-[95%] lg:w-[1600px] m-auto">
+    <ScrollRevealSection
+      as="div"
+      className="relative z-10 w-full bg-transparent px-6 py-16 text-white md:px-20"
+      panelClassName="glass-panel mx-auto w-full max-w-[1180px] px-5 py-10 lg:px-8"
+      contentClassName="will-change-transform"
+    >
+      <ScrollRevealItem>
         <motion.h2
-          className="h3 text-[40px] lg:h3 text-center"
+          className="h3 text-center text-[40px] lg:h3"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
@@ -41,21 +67,24 @@ const About = () => {
         >
           More <span className="text-[#1ea6c8]">About</span> Me
         </motion.h2>
+      </ScrollRevealItem>
 
+      <ScrollRevealItem delay={0.08}>
         <motion.p
-          className="text-md text-center w-full lg:w-[40%] m-auto text-[#B0B7C5]"
+          className="mx-auto w-full text-center font-sans text-[17px] leading-8 text-[#B0B7C5] lg:w-[68%] lg:text-[20px]"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
-          I’m Ghulam Ali — a passionate full-stack developer who turns ideas
+          I&apos;m Ghulam Ali, a passionate full-stack developer who turns ideas
           into clean, fast, and scalable digital solutions. I blend creativity
           with code to build web experiences that truly connect.
         </motion.p>
+      </ScrollRevealItem>
 
-        <div className="grid md:grid-cols-2 gap-12 mt-16">
-          {/* Education */}
+      <ScrollRevealItem delay={0.14}>
+        <div className="mt-16 grid gap-12 md:grid-cols-2">
           <motion.div
             className="flex flex-col gap-[20px]"
             variants={fadeInUp}
@@ -63,22 +92,30 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="h5">My Education</h3>
+            <h3 className="font-sans text-[30px] font-[700] text-white lg:text-[38px]">
+              My Education
+            </h3>
 
             {Eduction.map((data, index) => (
-              <motion.div key={index} className="flex flex-col gap-[15px]">
+              <motion.div
+                key={index}
+                className="flex flex-col gap-4 rounded-[22px] border border-[#2FB7D922] bg-[#0f1825a6] p-5 backdrop-blur-[16px]"
+              >
                 <div>
-                  <p className="h6 text-[26px]">{data.year}</p>
-                  <h4 className="h6 text-[26px] text-[#1ea6c8] font-bold">
+                  <p className="font-sans text-[30px] font-[700] text-white lg:text-[34px]">
+                    {data.year}
+                  </p>
+                  <h4 className="mt-1 font-sans text-[26px] font-[700] leading-snug text-[#1ea6c8] lg:text-[30px]">
                     {data.course}
                   </h4>
                 </div>
-                <p className="text-md text-[#B0B7C5] text-[18px]">{data.dec}</p>
+                <p className="font-sans text-[17px] leading-8 text-[#B0B7C5] lg:text-[20px]">
+                  {data.dec}
+                </p>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Skills */}
           <motion.div
             className="flex flex-col gap-[20px]"
             variants={fadeInUp}
@@ -86,7 +123,9 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="h5">My Skills</h3>
+            <h3 className="font-sans text-[30px] font-[700] text-white lg:text-[38px]">
+              My Skills
+            </h3>
             {[
               { skill: "HTML CSS & Css Frameworks", level: 80 },
               { skill: "JavaScript", level: 80 },
@@ -95,24 +134,62 @@ const About = () => {
               { skill: "Database", level: 65 },
               { skill: "Git & Githab", level: 60 },
               { skill: "WordPress", level: 60 },
+              { skill: "Domain & Website Hosted", level: 80 },
             ].map(({ skill, level }) => (
-              <div key={skill} className="flex flex-col gap-[20px]">
-                <div className="flex justify-between text-sm mt-[10px]">
-                  <span className="text-md">{skill}</span>
-                  <span className="text-md">{level}%</span>
+              <div key={skill} className="flex flex-col gap-[14px]">
+                <div className="mt-[10px] flex justify-between gap-4">
+                  <span className="font-sans text-[19px] font-[600] text-white lg:text-[21px]">
+                    {skill}
+                  </span>
+                  <span className="font-sans text-[19px] font-[600] text-white lg:text-[21px]">
+                    {level}%
+                  </span>
                 </div>
-                <div className="w-full h-[20px] bg-gray-700 rounded-[20px] ">
+                <div className="h-[20px] w-full rounded-[20px] bg-gray-700/90">
                   <div
-                    className="h-[20px] bg-[#1ea6c8] rounded-[20px] text-md"
+                    className="h-[20px] rounded-[20px] bg-[#1ea6c8]"
                     style={{ width: `${level}%` }}
                   ></div>
                 </div>
               </div>
             ))}
+
+            <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-3">
+              {circleSkills.map(({ title, value, icon: Icon }) => (
+                <div
+                  key={title}
+                  className="flex flex-col items-center rounded-[22px] bg-transparent px-4 py-5 text-center"
+                >
+                  <div className="relative flex h-[124px] w-[124px] items-center justify-center">
+                    <div
+                      className="absolute inset-0 rounded-full"
+                      style={{
+                        background: `conic-gradient(#1ea6c8 ${value * 3.6}deg, rgba(85, 98, 124, 0.5) 0deg)`,
+                        WebkitMask:
+                          "radial-gradient(farthest-side, transparent calc(100% - 14px), #000 calc(100% - 13px))",
+                        mask:
+                          "radial-gradient(farthest-side, transparent calc(100% - 14px), #000 calc(100% - 13px))",
+                      }}
+                    />
+
+                    <div className="relative z-10 flex flex-col items-center justify-center rounded-full bg-transparent">
+                      <Icon className="text-[24px] text-[#2FB7D9]" />
+                      <span className="mt-1 font-sans text-[18px] font-[700] text-white">
+                        {value}%
+                      </span>
+                    </div>
+                  </div>
+
+                  <h4 className="mt-4 font-sans text-[16px] font-[600] text-[#d7e4f2]">
+                    {title}
+                  </h4>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
-      </div>
-    </div>
+      </ScrollRevealItem>
+    </ScrollRevealSection>
   );
 };
 

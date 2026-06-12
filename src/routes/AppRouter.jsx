@@ -14,17 +14,19 @@ import Footer from "../layout/Footer";
 const AppRouter = () => {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/Portfolio" element={<Portfolio />} />
-        <Route path="/Experience" element={<Experience />} />
-        <Route path="/Blog" element={<Blogs />} />
-        <Route path="/Contact" element={<Contact />} />
-      </Routes>
-      <Footer />
+      <div className="min-h-screen bg-custom-gradient text-white">
+        <Header />
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/Portfolio" element={<Portfolio />} />
+          <Route path="/Experience" element={<Experience />} />
+          <Route path="/Blog" element={<Blogs />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 };

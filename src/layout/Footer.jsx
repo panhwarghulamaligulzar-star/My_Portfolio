@@ -19,7 +19,7 @@ const fadeInUp = {
 const Footer = () => {
   return (
     <div
-      className=" bg-[#0C0F17] text-[#c9c9c9] px-8 md:px-20 py-12 overflow-hidden"
+      className="relative z-[30] bg-[#0C0F17] text-[#c9c9c9] px-8 md:px-20 py-12 overflow-hidden"
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"

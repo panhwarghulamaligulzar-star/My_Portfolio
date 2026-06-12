@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import ScrollRevealSection from "./ScrollRevealSection";
+import ScrollRevealItem from "./ScrollRevealItem";
 
 const testimonials = [
   {
-    name: "Lara Johnson",
+    name: "Asad Ali",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
     message:
-      "Working with Ghulam was an absolute pleasure. His React expertise and clear communication made our U.S. e-commerce platform upgrade seamless.",
-    company: "Johnson and Brothers",
-    role: "CEO, USA",
+      "Ghulam built our school management system with great care and professionalism. The platform made student, staff, and academic workflows much easier for our academy team.",
+    company: "ODC Academy",
+    role: "CEO, Pakistan",
   },
   {
     name: "Ahmed Raza",
@@ -22,13 +24,13 @@ const testimonials = [
     role: "CTO, Pakistan",
   },
   {
-    name: "Emily Carter",
-    rating: 4,
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    name: "Shahid Ali",
+    rating: 5,
+    image: "https://randomuser.me/api/portraits/men/41.jpg",
     message:
-      "Very responsive and detail-oriented. He helped improve our website’s performance significantly. Great job!",
-    company: "BrightWeb Agency",
-    role: "Project Manager, USA",
+      "Ghulam worked with us as a full-stack developer on our product and handled both frontend and backend responsibilities with strong commitment, clean execution, and reliable delivery.",
+    company: "FuturifySoft",
+    role: "CEO, Pakistan",
   },
   {
     name: "Bilal Khan",
@@ -57,17 +59,22 @@ export default function TestimonialSection() {
       transition: {
         duration: 0.6,
         ease: "easeOut",
-        delay: i * 0.1, // staggered delay
+        delay: i * 0.1,
       },
     }),
   };
 
   return (
-    <div className="bg-custom-gradient py-20 px-4 w-full">
-      <div className="w-[95%] m-auto lg:w-[1600px]">
-        <div className="text-center mb-12">
+    <ScrollRevealSection
+      as="div"
+      className="relative z-10 w-full bg-transparent px-4 py-20"
+      panelClassName="mx-auto w-full max-w-[1180px] px-5 py-10 lg:px-8"
+      contentClassName="will-change-transform"
+    >
+      <ScrollRevealItem>
+        <div className="mb-12 text-center">
           <motion.h2
-            className="h3 text-[40px] lg:h3 text-center"
+            className="h3 text-center text-[40px] lg:h3"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
@@ -76,30 +83,29 @@ export default function TestimonialSection() {
             What My <span className="text-[#1ea6c8]">Clients</span> Says
           </motion.h2>
           <motion.p
-            className="text-md text-center w-full lg:w-[40%] m-auto text-[#B0B7C5]"
+            className="text-md m-auto w-full text-center text-[#B0B7C5] lg:w-[40%]"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             custom={1}
           >
-            Hear directly from my amazing clients — real stories, honest
+            Hear directly from my amazing clients, real stories, honest
             feedback, and shared success from our collaborations.
           </motion.p>
         </div>
+      </ScrollRevealItem>
 
-        <div className="relative flex justify-center items-center">
-          {/* Left Arrow */}
+      <ScrollRevealItem delay={0.1}>
+        <div className="relative flex items-center justify-center">
           <button
             onClick={prevSlide}
-            className="absolute left-0 lg:left-[23%] top-1/2 -translate-y-1/2 z-10 bg-transparent border border-cyan-700 text-cyan-400 hover:bg-cyan-700/20 rounded-full p-3"
+            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-cyan-700 bg-transparent p-3 text-cyan-400 hover:bg-cyan-700/20 lg:left-2"
           >
             <FaChevronLeft />
           </button>
 
-          {/* Slider */}
-
-          <div className="overflow-hidden w-full max-w-3xl">
+          <div className="w-full max-w-3xl overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${current * 100}%)` }}
@@ -107,18 +113,18 @@ export default function TestimonialSection() {
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  className="min-w-full card flex flex-col justify-start items-start"
+                  className="glass-panel flex min-w-full flex-col items-start justify-start rounded-[28px] border border-[#2FB7D966] px-6 py-7 lg:px-8 lg:py-8"
                   variants={fadeInUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.5 }}
                   custom={index + 1}
                 >
-                  <div className="flex items-center gap-4 mb-4">
+                  <div className="mb-4 flex items-center gap-4">
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-14 h-14 rounded-full object-cover"
+                      className="h-14 w-14 rounded-full object-cover"
                     />
                     <div>
                       <h3 className="h5">{testimonial.name}</h3>
@@ -132,7 +138,7 @@ export default function TestimonialSection() {
                     </div>
                   </div>
 
-                  <p className="text-md text-[#B0B7C5] text-start">
+                  <p className="text-md text-start text-[#B0B7C5]">
                     {testimonial.message}
                   </p>
 
@@ -145,28 +151,28 @@ export default function TestimonialSection() {
             </div>
           </div>
 
-          {/* Right Arrow */}
           <button
             onClick={nextSlide}
-            className="absolute right-0 lg:right-[23%] top-1/2 -translate-y-1/2 z-10 bg-transparent border border-[#1ea6c8] text-[#1ea6c8] hover:bg-[#1ea6c8]-700/20 rounded-full p-3"
+            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-[#1ea6c8] bg-transparent p-3 text-[#1ea6c8] hover:bg-[#1ea6c8]-700/20 lg:right-2"
           >
             <FaChevronRight />
           </button>
         </div>
+      </ScrollRevealItem>
 
-        {/* Pagination Dots */}
-        <div className="flex justify-center mt-8 gap-3">
+      <ScrollRevealItem delay={0.16}>
+        <div className="mt-8 flex justify-center gap-3">
           {testimonials.map((_, idx) => (
             <div
               key={idx}
               onClick={() => setCurrent(idx)}
-              className={`w-3 h-3 rounded-full cursor-pointer ${
+              className={`h-3 w-3 cursor-pointer rounded-full ${
                 current === idx ? "bg-cyan-400" : "bg-gray-500 opacity-50"
               }`}
             ></div>
           ))}
         </div>
-      </div>
-    </div>
+      </ScrollRevealItem>
+    </ScrollRevealSection>
   );
 }
