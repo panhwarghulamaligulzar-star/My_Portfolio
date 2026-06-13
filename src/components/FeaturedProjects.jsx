@@ -337,12 +337,24 @@ const FeaturedProjects = () => {
             padding: 0.8rem 1rem;
           }
 
-          .fp-card.is-depth-1,
-          .fp-card.is-depth-2,
-          .fp-card.is-depth-3,
+          .fp-card.is-depth-1 {
+            transform: translateY(-10px) scale(0.985);
+            opacity: 0.82;
+          }
+
+          .fp-card.is-depth-2 {
+            transform: translateY(-18px) scale(0.965);
+            opacity: 0.6;
+          }
+
+          .fp-card.is-depth-3 {
+            transform: translateY(-26px) scale(0.945);
+            opacity: 0.4;
+          }
+
           .fp-card.is-depth-4 {
-            opacity: 0 !important;
-            transform: translateY(110vh) scale(1) !important;
+            transform: translateY(-34px) scale(0.925);
+            opacity: 0.22;
           }
         }
       `}</style>
